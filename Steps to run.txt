@@ -1,0 +1,22 @@
+1.First of all run file server.js
+2.Then visit http://localhost:8000/login in browser.
+3.If you are a new user then signup using signup form.
+4.If you want to login directly then you can use email:ankit.mca16.du@gmail.com and password:12345
+5.If you want to use the functionality of forgotPassword then you have to do some changes in server.js file.
+6.Now in server.js do following changes
+
+	app.post('/forgotpassword', (req, res) => {
+  	//some code here
+    	auth: {
+     	 user: 'yourEmail@gmail.com',			//write your email id here(gmail)
+     	 pass: 'yourEmailPassword'			//write your password
+   	 }			
+ 	 });
+  
+	//some code here
+  
+	var mailOptions = {
+    	from: 'yourEmail@gmail.com',			//write your email id here
+   	
+	// some code here
+  	};

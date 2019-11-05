@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body style="background:darkseagreen">
+    <br>
+
+    <div class="container">
+        <div style="margin-left: 25%;" class="col-4">
+            <div class="flex-row justify-content-center align-items-center">
+                <form action="/logout">
+                    <h1><img src="https://icon-library.net/images/avatar-icon-png/avatar-icon-png-8.jpg" alt="Avatar"
+                            style="vertical-align: middle;width: 50px;height: 50px;border-radius: 50%"> Welcome to Band
+                        Utility {{name}} !!
+                        <button class="btn btn-danger mt-1">Logout </button></h1>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-8 form-group">
+
+                <form style="padding-left: 15% ;padding-right: 15%;" method="POST" action="/update?_method=PUT">
+                    <div class="form-group">
+                        <div class="form-group">
+                            <label for="email">BandName:</label>
+                            <input type="text" class="form-control" placeholder="Enter Name of the Band.." name="band"
+                                id="bandId" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Description:</label>
+                            <input type="text" class="form-control" placeholder="Enter Description of the Band.."
+                                name="bandDescription" id="bandId" required>
+                        </div>
+
+                        <button class="btn btn-danger btn-lg btn-block" name="bandUpdate" style="" value={{id}}>Update
+                            ✔</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</body>
+
+</html>
